@@ -1,0 +1,33 @@
+import Foundation
+enum Type{
+    case amphibians, aquatic, terrestrial
+}
+class Animal {
+    var type = Type.terrestrial
+    var name = ""
+    var age = 0
+
+    func noteForAnimal(){
+        print("")
+    }
+}
+
+class Dog: Animal{
+    var numOfCoats = 0
+
+    override func noteForAnimal() {
+        print("""
+        Thanks for Viewing info about \(type) species of Animal, 
+        Class Dog who's Breed is \(name).
+        Age: \(age) Years having \(numOfCoats) number of Coat(s).
+        """)        
+    }
+}
+
+var dog1 = Dog()
+dog1.type = .amphibians
+dog1.name = "German Shepherd"
+dog1.numOfCoats = 2
+dog1.age = 2
+
+dog1.noteForAnimal()

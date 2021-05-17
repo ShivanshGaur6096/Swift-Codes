@@ -1,0 +1,34 @@
+import Foundation
+var myArr : [String]  = ["Dog", "Cat", "Bird"] //Explicit decleration for array of string
+var emptyArray : [String] = []
+var emptyArray2 = [String]()
+
+//print("Printing using Index: " + myArr[1])
+
+// print("Using For Loop to print items with adding details")
+// for counter in 0...2{ // Don't know length of array? use "0...myArr.count-1" -1 because?
+//     myArr[counter] = "My " + myArr[counter] //Can't use let with this
+//     print("Item \(counter). \(myArr[counter])")
+// }
+// //Alternative If length of Array is unknown
+// for item in myArr {
+//     print(item)
+// }
+print(myArr)
+//Add Items 
+myArr.insert("Fish", at: 2)
+myArr += ["Horse", "Peacock"]
+ myArr.append("Bear")
+
+//Remove items
+myArr.remove(at: 0)
+
+//Search Item
+print(myArr.index(of: "Peacock"))//firstIndex, lastIndex
+
+
+print("----Modified Array----")
+print(myArr)
+
+
+

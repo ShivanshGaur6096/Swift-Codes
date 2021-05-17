@@ -1,0 +1,45 @@
+import Foundation
+
+// var emptyString = ""
+// var anotherEmptyString = String()
+
+// if anotherEmptyString.isEmpty{
+//     print("String Is Empty")
+// }
+
+// var firstName = "Shiv"
+// firstName += "ansh"
+
+// let constantString = "Try to add something"
+// constantString += "and this is what I'm trying to add"
+// var lastName = " Gaur"
+
+// var fullName = firstName + lastName
+// print(fullName)
+
+//let multiplier = 3
+
+//let message = "\(multiplier) time 2.5 is \(Double(multiplier)*2.5)"
+//print(message)
+
+var name = "Shivansh!"
+//name += "\u{301}" //Count will not count Acute Accent (like. matra in hindi) 
+
+// print(name)
+// print(name.count) //Counting Characters
+name.insert("!", at: name.endIndex)
+name.insert(contentsOf: "Gaur", at: name.index(before: name.endIndex))
+
+//print(name)
+
+name.remove(at: name.index(before: name.endIndex))
+let removingRange = name.index(name.endIndex, offsetBy: -5)..<name.endIndex
+name.removeSubrange(removingRange)
+
+// print(name[name.startIndex])
+// print(name[name.index(before: name.endIndex)])
+// print(name[name.index(after: name.startIndex)])
+
+for index in name.indices {
+    print("\(name[index])", terminator: " ")    
+}

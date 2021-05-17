@@ -1,0 +1,61 @@
+import Foundation
+
+class Employee{
+    var name = ""
+    var mobNo = 0
+}
+
+var emp1 = Employee()
+emp1.name = "Shivansh"
+emp1.mobNo = 828282828
+
+var emp2 = Employee()
+emp2.name = "Gaur"
+emp2.mobNo = 828282828
+
+
+print(emp2.mobNo)
+
+//-----------------Enum Used--------------------------------
+import Foundation
+
+enum Volume{
+    case One 
+    case Two
+    case Five
+}
+enum Type{
+    case glassBottle, plasticBottle, packet
+}
+
+class WaterBottle{
+    var volume = Volume.One
+    var brand = ""
+    var type = Type.packet
+
+    func waterBottleInfo() -> String {
+    return "You have \(self.brand)'s \(volume) ltr(s) \(type) Bottle"   
+    }
+   
+}
+
+
+var type1 = WaterBottle()
+type1.volume = .One
+type1.brand = "Shivansh"
+type1.type = .glassBottle
+
+var type2 = WaterBottle()
+type2.volume = .Five
+type2.brand = "Gaur"
+type2.type = .plasticBottle
+
+var result1 = type1.waterBottleInfo()
+var result2 = type2.waterBottleInfo()
+print(result1)
+print(result2)
+// print(type1.type)
+// print(type2.type)
+
+// print(type1.volume)
+// print(type2.volume)
